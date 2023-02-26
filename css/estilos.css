@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+div .center {
+  display: flex;
+  height: 400px;
+  width: 400px;
+  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+}
+div .center .conjunto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+  height: 80px;
+  width: 110px;
+  gap: 1em;
+  background-color: transparent;
+}
+div .center .conjunto .lineas {
+  width: 100px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+}
+div .center .conjunto .class1 {
+  animation: both 0.5s cubic-bezier(0.45, 0, 0.55, 1) animar1-rev;
+  z-index: 2;
+}
+div .center .conjunto .class2 {
+  animation: both 0.5s cubic-bezier(0.45, 0, 0.55, 1) animar2-rev;
+  z-index: 1;
+}
+div .center .conjunto .class3 {
+  animation: both 0.5s cubic-bezier(0.45, 0, 0.55, 1) animar3-rev;
+  z-index: 3;
+}
+div .center .rotar {
+  position: relative;
+}
+div .center .rotar .class1 {
+  animation: both 0.5s cubic-bezier(0, 0.55, 0.45, 1) animar1;
+  z-index: 2;
+}
+div .center .rotar .class2 {
+  animation: both 0.5s cubic-bezier(0, 0.55, 0.45, 1) animar2;
+  z-index: 1;
+}
+div .center .rotar .class3 {
+  animation: both 0.5s cubic-bezier(0, 0.55, 0.45, 1) animar3;
+  z-index: 3;
+}
+
+@keyframes animar1 {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  75% {
+    transform: translate3d(0, 26px, 0) rotate(0);
+  }
+  100% {
+    transform: translate3d(0, 26px, 0) rotate(-135deg);
+  }
+}
+@keyframes animar2 {
+  0% {
+    transform: scalex(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scalex(0.1);
+  }
+}
+@keyframes animar3 {
+  0% {
+    transform: translateY(0px);
+  }
+  75% {
+    transform: translate3d(0, -25px, 0) rotate(0);
+  }
+  100% {
+    transform: translate3d(0, -25px, 0) rotate(135deg);
+  }
+}
+@keyframes animar1-rev {
+  0% {
+    transform: translate3d(0, 26px, 25px) rotate(45deg);
+  }
+  50% {
+    transform: translate3d(0, 26px, 25px) rotate(0deg);
+  }
+  100% {
+    transform: translate3d(0, 0, 25px);
+  }
+}
+@keyframes animar2-rev {
+  0% {
+    opacity: 0;
+    transform: scaleX(0.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
+@keyframes animar3-rev {
+  0% {
+    transform: translate3d(0, -26px, 25px) rotate(-45deg);
+  }
+  50% {
+    transform: translate3d(0, -26px, 25px) rotate(0deg);
+  }
+  100% {
+    transform: translate3d(0, 0, 25px);
+  }
+}/*# sourceMappingURL=estilos.css.map */
